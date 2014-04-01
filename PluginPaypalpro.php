@@ -95,7 +95,7 @@ class PluginPaypalpro extends GatewayPlugin
 				"value"         =>"0"
 			       ),
 		/*T*/"Check CVV2"/*/T*/ => array (
-				"type"          =>"yesno",
+				"type"          =>"hidden",
 				"description"   =>/*T*/"PayPal Pro requires CVV2 checking."/*/T*/,
 				"value"         =>"1"
 			       )
