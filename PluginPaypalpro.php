@@ -18,85 +18,85 @@ class PluginPaypalpro extends GatewayPlugin
               value       - default value
         */
         $variables = array (
-		/*T*/"Plugin Name"/*/T*/ => array (
+		lang("Plugin Name") => array (
 				"type"          =>"hidden",
-				"description"   =>/*T*/"How CE sees this plugin (not to be confused with the Signup Name)"/*/T*/,
-				"value"         =>/*T*/"Paypal Pro"/*/T*/
+				"description"   =>lang("How CE sees this plugin (not to be confused with the Signup Name)"),
+				"value"         =>lang("Paypal Pro")
 			       ),
-		/*T*/"Use PayPal Sandbox"/*/T*/ => array(
+		lang("Use PayPal Sandbox") => array(
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES if you want to use the PayPal testing server, so no actual monetary transactions are made. You need to have a developer account with Paypal. Enter the API credentials from your Sandbox account below.  To test it, you must be logged into the developer panel (developer.paypal.com) in another browser window for the transaction to be successful."/*/T*/,
+				"description"   =>lang("Select YES if you want to use the PayPal testing server, so no actual monetary transactions are made. You need to have a developer account with Paypal. Enter the API credentials from your Sandbox account below.  To test it, you must be logged into the developer panel (developer.paypal.com) in another browser window for the transaction to be successful."),
 				"value"   	=>"0"
 				),
-		/*T*/"API Username"/*/T*/ => array (
+		lang("API Username") => array (
 				"type"          =>"text",
-				"description"   =>/*T*/"Enter your PayPal API Username Here."/*/T*/,
+				"description"   =>lang("Enter your PayPal API Username Here."),
 				"value"         =>""
 			       ),
-		/*T*/"API Password"/*/T*/ => array (
+		lang("API Password") => array (
 				"type"          =>"text",
-				"description"   =>/*T*/"Enter your PayPal API Password Here."/*/T*/,
+				"description"   =>lang("Enter your PayPal API Password Here."),
 				"value"         =>""
 			       ),
-		/*T*/"API Signature"/*/T*/ => array (
+		lang("API Signature") => array (
 				"type"          =>"text",
-				"description"   =>/*T*/"Enter your PayPal API Signature Here."/*/T*/,
+				"description"   =>lang("Enter your PayPal API Signature Here."),
 				"value"         =>""
 			       ),
-		/*T*/"Accept CC Number"/*/T*/ => array (
+		lang("Accept CC Number") => array (
 				"type"          =>"hidden",
-				"description"   =>/*T*/"Selecting YES allows the entering of CC numbers when using this plugin type. No will prevent entering of cc information."/*/T*/,
+				"description"   =>lang("Selecting YES allows the entering of CC numbers when using this plugin type. No will prevent entering of cc information."),
 				"value"         =>"1"
 			       ),
-		/*T*/"Visa"/*/T*/ => array (
+		lang("Visa") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES to allow Visa card acceptance with this plugin.  No will prevent this card type."/*/T*/,
+				"description"   =>lang("Select YES to allow Visa card acceptance with this plugin.  No will prevent this card type."),
 				"value"         =>"1"
 			       ),
-		/*T*/"MasterCard"/*/T*/ => array (
+		lang("MasterCard") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES to allow MasterCard acceptance with this plugin. No will prevent this card type."/*/T*/,
+				"description"   =>lang("Select YES to allow MasterCard acceptance with this plugin. No will prevent this card type."),
 				"value"         =>"1"
 			       ),
-		/*T*/"AmericanExpress"/*/T*/ => array (
+		lang("AmericanExpress") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES to allow American Express card acceptance with this plugin. No will prevent this card type."/*/T*/,
+				"description"   =>lang("Select YES to allow American Express card acceptance with this plugin. No will prevent this card type."),
 				"value"         =>"1"
 			       ),
-		/*T*/"Discover"/*/T*/ => array (
+		lang("Discover") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES to allow Discover card acceptance with this plugin. No will prevent this card type."/*/T*/,
+				"description"   =>lang("Select YES to allow Discover card acceptance with this plugin. No will prevent this card type."),
 				"value"         =>"1"
 			       ),
-		/*T*/"Invoice After Signup"/*/T*/ => array (
+		lang("Invoice After Signup") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES if you want an invoice sent to the customer after signup is complete.  NOTE: PayPal Website Payments Pro does not send a receipt for this payment type."/*/T*/,
+				"description"   =>lang("Select YES if you want an invoice sent to the customer after signup is complete.  NOTE: PayPal Website Payments Pro does not send a receipt for this payment type."),
 				"value"		=>"0"
 			       ),
-		/*T*/"Signup Name"/*/T*/ => array (
+		lang("Signup Name") => array (
 				"type"          =>"text",
-				"description"   =>/*T*/"Select the name to display in the signup process for this payment type. Example: Credit Card."/*/T*/,
+				"description"   =>lang("Select the name to display in the signup process for this payment type. Example: Credit Card."),
 				"value"         =>"Credit Card"
 			       ),
-		/*T*/"Dummy Plugin"/*/T*/ => array (
+		lang("Dummy Plugin") => array (
 				"type"          =>"hidden",
-				"description"   =>/*T*/"1 = Only used to specify a billing type for a customer. 0 = full fledged plugin requiring complete functions"/*/T*/,
+				"description"   =>lang("1 = Only used to specify a billing type for a customer. 0 = full fledged plugin requiring complete functions"),
 				"value"         =>"0"
 			       ),
-		/*T*/"Auto Payment"/*/T*/ => array (
+		lang("Auto Payment") => array (
 				"type"          =>"hidden",
-				"description"   =>/*T*/"No description"/*/T*/,
+				"description"   =>lang("No description"),
 				"value"         =>"1"
 
 			       ),
-		/*T*/"30 Day Billing"/*/T*/ => array (
+		lang("30 Day Billing") => array (
 				"type"          =>"yesno",
-				"description"   =>/*T*/"Select YES if you want ClientExec to treat monthly billing by 30 day intervals.  If you select NO then the same day will be used to determine intervals."/*/T*/,
+				"description"   =>lang("Select YES if you want ClientExec to treat monthly billing by 30 day intervals.  If you select NO then the same day will be used to determine intervals."),
 				"value"         =>"0"
 			       ),
-		/*T*/"Check CVV2"/*/T*/ => array (
+		lang("Check CVV2") => array (
 				"type"          =>"hidden",
-				"description"   =>/*T*/"PayPal Pro requires CVV2 checking."/*/T*/,
+				"description"   =>lang("PayPal Pro requires CVV2 checking."),
 				"value"         =>"1"
 			       )
         );
