@@ -180,7 +180,7 @@ class PluginPaypalpro extends GatewayPlugin
 
         // Construct the NVP string
         $nvpstr = "&AMT=" . $paypalpro['invoiceTotal'] . "&CURRENCYCODE=" . $paypalpro['currencycode'] . "&PAYMENTACTION=" . $paypalpro['paymentaction'] . "&CREDITCARDTYPE=" . $paypalpro['creditCardType'] . "&ACCT=" . $paypalpro['creditCardNumber'] . "&EXPDATE=" . $paypalpro['expDate'] . "&CVV2=" . $paypalpro['cvv2'] . "&EMAIL=" . $paypalpro['email'] . "&FIRSTNAME=" . $paypalpro['firstname'] . "&LASTNAME=" . $paypalpro['lastname'] . "&STREET=" . $paypalpro['address'] . "&CITY=" . $paypalpro['city'] . "&STATE=" . $paypalpro['state'] . "&ZIP=" . $paypalpro['zip'] . "&COUNTRYCODE=" . $paypalpro['country'] .  "&INVNUM=" . $paypalpro['trans_id'] . "&IPADDRESS=" . $paypalpro['customer_ip'] . "&DESC=" . $paypalpro['description'];
-
+		$nvpstr .= "&BUTTONSOURCE=Clientexec_SP";
         // Call the function
 	$resArray = DirectPayment("DoDirectPayment",$paypalpro['API_Username'], $paypalpro['API_Password'], $paypalpro['API_Signature'], $paypalpro['API_Endpoint'], $nvpstr);
 
