@@ -70,7 +70,7 @@ class PluginPaypalpro extends GatewayPlugin
                    ),
         lang("Invoice After Signup") => array (
                 "type"          =>"yesno",
-                "description"   =>lang("Select YES if you want an invoice sent to the customer after signup is complete.  NOTE: PayPal Website Payments Pro does not send a receipt for this payment type."),
+                "description"   =>lang("Select YES if you want an invoice sent to the client after signup is complete.  NOTE: PayPal Website Payments Pro does not send a receipt for this payment type."),
                 "value"     =>"0"
                    ),
         lang("Signup Name") => array (
@@ -80,7 +80,7 @@ class PluginPaypalpro extends GatewayPlugin
                    ),
         lang("Dummy Plugin") => array (
                 "type"          =>"hidden",
-                "description"   =>lang("1 = Only used to specify a billing type for a customer. 0 = full fledged plugin requiring complete functions"),
+                "description"   =>lang("1 = Only used to specify a billing type for a client. 0 = full fledged plugin requiring complete functions"),
                 "value"         =>"0"
                    ),
         lang("Auto Payment") => array (
