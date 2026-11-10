@@ -8,6 +8,21 @@
 //include_once("../../../modules/billing/models/class.gateway.plugin.php");
 //calling from the plugin directory so I do not need to go up in dir
 
+$plugin = 'paypalpro';
+$prefix = 'plugin_'.$plugin.'_';
+
+if (!$this->settings->get($prefix.'In Signup') && !$this->settings->get($prefix.'One-Time Payments') && !$this->settings->get($prefix.'Available in Profile Billing Tab')) {
+    $fraudStatus = StatusAliasGateway::getInstance($this->user)->getUserStatusIdsFor(array(USER_STATUS_FRAUD));
+    $query  = "SELECT COUNT(*) FROM `users` WHERE `paymenttype` = ? AND `status` NOT IN (".implode(', ', $fraudStatus).") AND `groupid` NOT IN (SELECT `id` FROM `groups` WHERE `isadmin` = 1)";
+    $result = $this->db->query($query, $plugin);
+    list($count) = $result->fetch();
+
+    if ($count == 0) {
+        //Plugin not in use
+        return;
+    }
+}
+
 require_once 'modules/billing/models/class.gateway.plugin.php';
 
 $paypalpro["ack"] = urldecode(strtoupper($resArray["ACK"]));

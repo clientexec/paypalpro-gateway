@@ -9,9 +9,10 @@ function DirectPayment($methodName_, $API_UserName, $API_Password, $API_Signatur
 	curl_setopt($ch, CURLOPT_URL,$API_Endpoint);
 	curl_setopt($ch, CURLOPT_VERBOSE, 1);
 
-	// Turn off the server and peer verification (TrustManager Concept).
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
+	$caPathOrFile = \Composer\CaBundle\CaBundle::getSystemCaRootBundlePath();
+	curl_setopt($ch, is_dir($caPathOrFile) ? CURLOPT_CAPATH : CURLOPT_CAINFO, $caPathOrFile);
 
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 	curl_setopt($ch, CURLOPT_POST, 1);
